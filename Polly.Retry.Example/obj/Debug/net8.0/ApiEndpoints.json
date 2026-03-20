@@ -1,0 +1,32 @@
+[
+  {
+    "ContainingType": "Polly.Retry.Example.Controllers.BackendController",
+    "Method": "GetData",
+    "RelativePath": "api/Backend/data",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Polly.Retry.Example.Controllers.BackendController",
+    "Method": "ResetCallCount",
+    "RelativePath": "api/Backend/reset",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Polly.Retry.Example.Controllers.ConsumerController",
+    "Method": "GetDataFromBackend",
+    "RelativePath": "api/Consumer/data",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,55 @@
+using Polly;
+using Polly.Extensions.Http;
+using Polly.Retry.Example.TypedClient.Services;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// Política de reintento con backoff exponencial
+var retryPolicy = HttpPolicyExtensions
+    .HandleTransientHttpError()
+    .WaitAndRetryAsync(
+        retryCount: 3,
+        sleepDurationProvider: attempt => 
+            TimeSpan.FromSeconds(Math.Pow(2, attempt)),
+        onRetry: (outcome, timespan, retryCount, context) =>
+        {
+            Console.WriteLine($"[TypedClient] Reintentando... Intento {retryCount} después de {timespan.TotalSeconds}s");
+        }
+    );
+
+// Política de circuit breaker
+var circuitBreakerPolicy = HttpPolicyExtensions
+    .HandleTransientHttpError()
+    .CircuitBreakerAsync(
+        handledEventsAllowedBeforeBreaking: 3,
+        durationOfBreak: TimeSpan.FromSeconds(10)
+    );
+
+// Configurar HttpClient con inyección de tipo (Typed HttpClient)
+// El HttpClient se inyecta directamente en el constructor del servicio
+builder.Services.AddHttpClient<IBackendService, BackendService>()
+    .AddPolicyHandler(retryPolicy)
+    .AddPolicyHandler(circuitBreakerPolicy);
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+await app.RunAsync();

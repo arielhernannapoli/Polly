@@ -1,0 +1,343 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E0060BC9-50D4-40C6-B040-340246668D9D}|Polly.Retry.Example\\Polly.Retry.Example.csproj|c:\\users\\ariel\\source\\repos\\polly.retry.example\\polly.retry.example\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0060BC9-50D4-40C6-B040-340246668D9D}|Polly.Retry.Example\\Polly.Retry.Example.csproj|solutionrelative:polly.retry.example\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0060BC9-50D4-40C6-B040-340246668D9D}|Polly.Retry.Example\\Polly.Retry.Example.csproj|c:\\users\\ariel\\source\\repos\\polly.retry.example\\polly.retry.example\\services\\backendservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0060BC9-50D4-40C6-B040-340246668D9D}|Polly.Retry.Example\\Polly.Retry.Example.csproj|solutionrelative:polly.retry.example\\services\\backendservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Polly.Retry.Example.TypedClient.csproj||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Polly.Retry.Example.TypedClient\\Polly.Retry.Example.TypedClient.csproj||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Polly.Retry.Example.TypedClient\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Services\\BackendService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Polly.Retry.Example.TypedClient\\Services\\BackendService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Services\\IBackendService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Polly.Retry.Example.TypedClient\\Services\\IBackendService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\WeatherForecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Polly.Retry.Example.TypedClient\\WeatherForecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Controllers\\BackendController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Polly.Retry.Example.TypedClient\\Controllers\\BackendController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Controllers\\ConsumerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Polly.Retry.Example.TypedClient\\Controllers\\ConsumerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Controllers\\WeatherForecastController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Polly.Retry.Example.TypedClient\\Controllers\\WeatherForecastController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Polly.Retry.Example.TypedClient\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\appsettings.Development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Polly.Retry.Example.TypedClient\\appsettings.Development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\README-COMPARACION.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README-COMPARACION.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\ESTRUCTURA.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ESTRUCTURA.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.sln||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Polly.Retry.Example.sln||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0060BC9-50D4-40C6-B040-340246668D9D}|Polly.Retry.Example\\Polly.Retry.Example.csproj|c:\\users\\ariel\\source\\repos\\polly.retry.example\\polly.retry.example\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E0060BC9-50D4-40C6-B040-340246668D9D}|Polly.Retry.Example\\Polly.Retry.Example.csproj|solutionrelative:polly.retry.example\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Polly.Retry.Example.TypedClient\\Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\INSTRUCCIONES-EJECUCION.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:INSTRUCCIONES-EJECUCION.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\SOLUCION-COMPLETA.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SOLUCION-COMPLETA.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Polly.Retry.Example.TypedClient\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Polly.Retry.Example.TypedClient\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T21:58:30.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ConsumerController.cs",
+              "DocumentMoniker": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Controllers\\ConsumerController.cs",
+              "RelativeDocumentMoniker": "Polly.Retry.Example.TypedClient\\Controllers\\ConsumerController.cs",
+              "ToolTip": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Controllers\\ConsumerController.cs",
+              "RelativeToolTip": "Polly.Retry.Example.TypedClient\\Controllers\\ConsumerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T21:58:30.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BackendController.cs",
+              "DocumentMoniker": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Controllers\\BackendController.cs",
+              "RelativeDocumentMoniker": "Polly.Retry.Example.TypedClient\\Controllers\\BackendController.cs",
+              "ToolTip": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Controllers\\BackendController.cs",
+              "RelativeToolTip": "Polly.Retry.Example.TypedClient\\Controllers\\BackendController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T21:58:30.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "Polly.Retry.Example.TypedClient\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\WeatherForecast.cs",
+              "RelativeToolTip": "Polly.Retry.Example.TypedClient\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T21:58:30.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IBackendService.cs",
+              "DocumentMoniker": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Services\\IBackendService.cs",
+              "RelativeDocumentMoniker": "Polly.Retry.Example.TypedClient\\Services\\IBackendService.cs",
+              "ToolTip": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Services\\IBackendService.cs",
+              "RelativeToolTip": "Polly.Retry.Example.TypedClient\\Services\\IBackendService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T21:58:20.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BackendService.cs",
+              "DocumentMoniker": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Services\\BackendService.cs",
+              "RelativeDocumentMoniker": "Polly.Retry.Example.TypedClient\\Services\\BackendService.cs",
+              "ToolTip": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Services\\BackendService.cs",
+              "RelativeToolTip": "Polly.Retry.Example.TypedClient\\Services\\BackendService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T21:58:20.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Program.cs",
+              "RelativeDocumentMoniker": "Polly.Retry.Example.TypedClient\\Program.cs",
+              "ToolTip": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Program.cs",
+              "RelativeToolTip": "Polly.Retry.Example.TypedClient\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T21:58:16.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Polly.Retry.Example.TypedClient.csproj",
+              "DocumentMoniker": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Polly.Retry.Example.TypedClient.csproj",
+              "RelativeDocumentMoniker": "Polly.Retry.Example.TypedClient\\Polly.Retry.Example.TypedClient.csproj",
+              "ToolTip": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Polly.Retry.Example.TypedClient.csproj",
+              "RelativeToolTip": "Polly.Retry.Example.TypedClient\\Polly.Retry.Example.TypedClient.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-20T21:58:11.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BackendService.cs",
+              "DocumentMoniker": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example\\Services\\BackendService.cs",
+              "RelativeDocumentMoniker": "Polly.Retry.Example\\Services\\BackendService.cs",
+              "ToolTip": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example\\Services\\BackendService.cs",
+              "RelativeToolTip": "Polly.Retry.Example\\Services\\BackendService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T21:56:40.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example\\Program.cs",
+              "RelativeDocumentMoniker": "Polly.Retry.Example\\Program.cs",
+              "ToolTip": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example\\Program.cs",
+              "RelativeToolTip": "Polly.Retry.Example\\Program.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABsAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T21:56:34.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SOLUCION-COMPLETA.md",
+              "DocumentMoniker": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\SOLUCION-COMPLETA.md",
+              "RelativeDocumentMoniker": "SOLUCION-COMPLETA.md",
+              "ToolTip": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\SOLUCION-COMPLETA.md",
+              "RelativeToolTip": "SOLUCION-COMPLETA.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIkBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-03-20T22:01:01.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "INSTRUCCIONES-EJECUCION.md",
+              "DocumentMoniker": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\INSTRUCCIONES-EJECUCION.md",
+              "RelativeDocumentMoniker": "INSTRUCCIONES-EJECUCION.md",
+              "ToolTip": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\INSTRUCCIONES-EJECUCION.md",
+              "RelativeToolTip": "INSTRUCCIONES-EJECUCION.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-03-20T22:00:11.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Polly.Retry.Example.TypedClient\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Polly.Retry.Example.TypedClient\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-20T21:59:52.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Polly.Retry.Example\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Polly.Retry.Example\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-20T21:59:52.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Polly.Retry.Example.sln",
+              "DocumentMoniker": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.sln",
+              "RelativeDocumentMoniker": "Polly.Retry.Example.sln",
+              "ToolTip": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.sln",
+              "RelativeToolTip": "Polly.Retry.Example.sln",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002855|",
+              "WhenOpened": "2026-03-20T21:59:47.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ESTRUCTURA.md",
+              "DocumentMoniker": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\ESTRUCTURA.md",
+              "RelativeDocumentMoniker": "ESTRUCTURA.md",
+              "ToolTip": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\ESTRUCTURA.md",
+              "RelativeToolTip": "ESTRUCTURA.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-03-20T21:59:19.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "README-COMPARACION.md",
+              "DocumentMoniker": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\README-COMPARACION.md",
+              "RelativeDocumentMoniker": "README-COMPARACION.md",
+              "ToolTip": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\README-COMPARACION.md",
+              "RelativeToolTip": "README-COMPARACION.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAN0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-03-20T21:58:54.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Polly.Retry.Example.TypedClient\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\appsettings.Development.json",
+              "RelativeToolTip": "Polly.Retry.Example.TypedClient\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-20T21:58:40.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\appsettings.json",
+              "RelativeDocumentMoniker": "Polly.Retry.Example.TypedClient\\appsettings.json",
+              "ToolTip": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\appsettings.json",
+              "RelativeToolTip": "Polly.Retry.Example.TypedClient\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-20T21:58:40.298Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

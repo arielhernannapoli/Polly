@@ -1,0 +1,55 @@
+﻿using Polly;
+using Polly.CircuitBreaker;
+using Polly.Retry.Example.Services;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// Registrar servicios
+builder.Services.AddScoped<IBackendService, BackendService>();
+
+// Configurar HttpClient con Polly para reintentos
+builder.Services.AddHttpClient<IBackendService, BackendService>("BackendApi")
+    .AddTransientHttpErrorPolicy(p => 
+        p.WaitAndRetryAsync(
+            retryCount: 3,
+            sleepDurationProvider: attempt => 
+                TimeSpan.FromSeconds(Math.Pow(2, attempt)),
+            onRetry: (outcome, timespan, retryCount, context) =>
+            {
+                Console.WriteLine($"Reintentando... Intento {retryCount} después de {timespan.TotalSeconds}s");
+            }
+        )
+    )
+    .AddTransientHttpErrorPolicy(p =>
+        p.CircuitBreakerAsync(
+            handledEventsAllowedBeforeBreaking: 3,
+            durationOfBreak: TimeSpan.FromSeconds(10),
+            onBreak: (outcome, timespan) =>
+            {
+                Console.WriteLine($"Circuit breaker abierto por {timespan.TotalSeconds}s");
+            }
+        )
+    );
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
