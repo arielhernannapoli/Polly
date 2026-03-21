@@ -1371,11 +1371,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Polly.Retry.Example.TypedClient.csproj",
+      "projectUniqueName": "F:\\Data\\Code\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Polly.Retry.Example.TypedClient.csproj",
       "projectName": "Polly.Retry.Example.TypedClient",
-      "projectPath": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Polly.Retry.Example.TypedClient.csproj",
+      "projectPath": "F:\\Data\\Code\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\Polly.Retry.Example.TypedClient.csproj",
       "packagesPath": "C:\\Users\\ariel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ariel\\Source\\Repos\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\obj\\",
+      "outputPath": "F:\\Data\\Code\\Polly.Retry.Example\\Polly.Retry.Example.TypedClient\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

@@ -1,0 +1,34 @@
+namespace Polly.Retry.Example.DelegatingHandler.Services
+{
+    public class BackendService : IBackendService
+    {
+        private readonly HttpClient _httpClient;
+        private readonly ILogger<BackendService> _logger;
+
+        public BackendService(HttpClient httpClient, ILogger<BackendService> logger)
+        {
+            _httpClient = httpClient;
+            _logger = logger;
+        }
+
+        public async Task<string> GetDataAsync()
+        {
+            try
+            {
+                _logger.LogInformation("Llamando a Backend API...");
+
+                // Usar el HttpClient inyectado que tiene el DelegatingHandler configurado
+                var response = await _httpClient.GetAsync("https://localhost:7056/api/backend/data");
+                response.EnsureSuccessStatusCode();
+                var content = await response.Content.ReadAsStringAsync();
+                _logger.LogInformation("Backend API respondió correctamente");
+                return content;
+            }
+            catch (HttpRequestException ex)
+            {
+                _logger.LogError(ex, "Error al llamar a Backend API");
+                throw;
+            }
+        }
+    }
+}
