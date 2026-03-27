@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Polly.Retry.Example")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+59877ffa2d59120a2a06c42c2a1ba990997b0788")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2bd1751b9bff03f6b58a69181744ca015f029eaa")]
 [assembly: System.Reflection.AssemblyProductAttribute("Polly.Retry.Example")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Polly.Retry.Example")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

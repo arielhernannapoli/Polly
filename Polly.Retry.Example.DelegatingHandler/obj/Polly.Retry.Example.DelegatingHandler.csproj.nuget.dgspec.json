@@ -51,13 +51,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Polly": {
+            "Microsoft.Extensions.Http.Resilience": {
               "target": "Package",
-              "version": "[8.4.1, )"
-            },
-            "Polly.Extensions.Http": {
-              "target": "Package",
-              "version": "[3.0.0, )"
+              "version": "[10.4.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
