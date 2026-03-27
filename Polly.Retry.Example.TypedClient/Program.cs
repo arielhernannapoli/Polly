@@ -1,6 +1,6 @@
-using Polly;
-using Polly.Extensions.Http;
+using Microsoft.Extensions.Http.Resilience;
 using Polly.Retry.Example.TypedClient.Services;
+using Polly.Retry.Example.TypedClient.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,32 +10,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Política de reintento con backoff exponencial
-var retryPolicy = HttpPolicyExtensions
-    .HandleTransientHttpError()
-    .WaitAndRetryAsync(
-        retryCount: 3,
-        sleepDurationProvider: attempt => 
-            TimeSpan.FromSeconds(Math.Pow(2, attempt)),
-        onRetry: (outcome, timespan, retryCount, context) =>
-        {
-            Console.WriteLine($"[TypedClient] Reintentando... Intento {retryCount} después de {timespan.TotalSeconds}s");
-        }
-    );
-
-// Política de circuit breaker
-var circuitBreakerPolicy = HttpPolicyExtensions
-    .HandleTransientHttpError()
-    .CircuitBreakerAsync(
-        handledEventsAllowedBeforeBreaking: 3,
-        durationOfBreak: TimeSpan.FromSeconds(10)
-    );
-
-// Configurar HttpClient con inyección de tipo (Typed HttpClient)
+// ✅ Usar método de extensión personalizado
+// Configurar HttpClient con inyección de tipo (Typed HttpClient) usando Microsoft.Extensions.Http.Resilience
 // El HttpClient se inyecta directamente en el constructor del servicio
 builder.Services.AddHttpClient<IBackendService, BackendService>()
-    .AddPolicyHandler(retryPolicy)
-    .AddPolicyHandler(circuitBreakerPolicy);
+    .AddCustomResilienceHandler();
 
 var app = builder.Build();
 

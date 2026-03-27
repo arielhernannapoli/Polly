@@ -1,0 +1,64 @@
+using Microsoft.Extensions.Http.Resilience;
+using Polly.Retry.Example.Services;
+using Polly.Retry.Example.Extensions;
+using Polly.Retry.Example.Configuration;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// ════════════════════════════════════════════════════════════
+// FORMAS DE APLICAR AddStandardResilienceHandler GLOBALMENTE
+// ════════════════════════════════════════════════════════════
+
+// ✅ OPCIÓN 1: Método de Extensión Personalizado (por cliente)
+// ─────────────────────────────────────────────────────────────
+builder.Services.AddHttpClient("BackendApi")
+    .AddCustomResilienceHandler();
+
+// Puedes usar diferentes perfiles
+builder.Services.AddHttpClient("ExternalApi")
+    .AddAggressiveResilienceHandler();
+
+builder.Services.AddHttpClient("ThirdPartyApi")
+    .AddConservativeResilienceHandler();
+
+
+// ✅ OPCIÓN 2: Extensión para registrar múltiples clientes
+// ──────────────────────────────────────────────────────────
+// Registra varios clientes con la misma configuración de una vez
+//builder.Services.AddHttpClientsWithResilience("BackendApi", "ExternalApi", "ThirdPartyApi");
+
+
+// ✅ OPCIÓN 3: Configuración Global para TODOS
+// ──────────────────────────────────────────────
+// NOTA: Esto aplica la configuración globalmente a TODOS los HttpClients
+// Descomentar si quieres que TODOS los clientes sin configuración explícita
+// usen estas opciones
+//builder.Services.AddGlobalHttpClientResilience(ResilienceProfile.Standard);
+//builder.Services.AddHttpClient("BackendApi")
+//    .AddStandardResilienceHandler();  // ← Usa la config global
+//builder.Services.AddHttpClient("ExternalApi")
+//    .AddStandardResilienceHandler();  // ← También usa la config global
+
+
+// Registrar servicios
+builder.Services.AddScoped<IBackendService, BackendService>();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+app.UseAuthorization();
+app.MapControllers();
+
+await app.RunAsync();

@@ -1,40 +1,25 @@
-using Polly;
-using Polly.Extensions.Http;
+using Microsoft.Extensions.Http.Resilience;
 using Polly.Retry.Example.Services;
+using Polly.Retry.Example.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Política de reintento con backoff exponencial
-var retryPolicy = HttpPolicyExtensions
-    .HandleTransientHttpError()
-    .WaitAndRetryAsync(
-        retryCount: 3,
-        sleepDurationProvider: attempt => 
-            TimeSpan.FromSeconds(Math.Pow(2, attempt)),
-        onRetry: (outcome, timespan, retryCount, context) =>
-        {
-            Console.WriteLine($"Reintentando... Intento {retryCount} después de {timespan.TotalSeconds}s");
-        }
-    );
-
-// Política de circuit breaker
-var circuitBreakerPolicy = HttpPolicyExtensions
-    .HandleTransientHttpError()
-    .CircuitBreakerAsync(
-        handledEventsAllowedBeforeBreaking: 3,
-        durationOfBreak: TimeSpan.FromSeconds(10)
-    );
-
-// Configurar HttpClientFactory con cliente nombrado "BackendApi"
+// ✅ OPCIÓN 1: Usar método de extensión personalizado (recomendado)
 builder.Services.AddHttpClient("BackendApi")
-    .AddPolicyHandler(retryPolicy)
-    .AddPolicyHandler(circuitBreakerPolicy);
+    .AddCustomResilienceHandler();
+
+// ✅ O usar configuración agresiva
+// builder.Services.AddHttpClient("BackendApi")
+//     .AddAggressiveResilienceHandler();
+
+// O de forma individual si prefieres:
+// builder.Services.AddHttpClient("BackendApi")
+//     .AddCustomResilienceHandler();
 
 // Registrar servicios
 builder.Services.AddScoped<IBackendService, BackendService>();

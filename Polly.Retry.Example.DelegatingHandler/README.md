@@ -138,6 +138,153 @@ builder.Services.AddHttpClient<IBackendService, BackendService>()
     });
 ```
 
+## 🌐 Opciones de Configuración Global del DelegatingHandler
+
+El `PollyDelegatingHandler` puede configurarse de diferentes maneras para aplicarse globalmente a todos los clientes HTTP. A continuación se presentan tres opciones:
+
+### ✅ **Opción 1: Handler Global - Registrar como Singleton**
+
+Registra el `PollyDelegatingHandler` como un componente global (singleton) que se aplica a todos los `HttpClient`:
+
+```csharp
+// Registrar el handler como singleton (instancia única reutilizada)
+builder.Services.AddSingleton<PollyDelegatingHandler>(
+    new PollyDelegatingHandler(combinedPolicy)
+);
+
+// Configurar todos los HttpClient para usar este handler
+builder.Services
+    .AddHttpClient()
+    .AddHttpMessageHandler<PollyDelegatingHandler>();
+
+// El cliente específico hereda el handler automáticamente
+builder.Services.AddHttpClient<IBackendService, BackendService>()
+    .ConfigureHttpClient(client =>
+    {
+        client.BaseAddress = new Uri("https://localhost:7056");
+        client.Timeout = TimeSpan.FromSeconds(10);
+    });
+```
+
+**Ventajas:**
+- ✅ Instancia única reutilizada en todos los clientes
+- ✅ Menor consumo de memoria
+- ✅ Configuración centralizada
+- ✅ Mejor rendimiento
+
+**Desventajas:**
+- ❌ Menos flexibilidad si necesitas handlers diferentes por cliente
+
+**Ideal para:**
+- Aplicaciones pequeñas y medianas
+- Cuando todos los clientes necesitan las mismas políticas
+
+---
+
+### 🔄 **Opción 2: Factory Global con Personalización por Cliente**
+
+Registra un factory que permite diferentes configuraciones por cliente, pero con aplicación global por defecto:
+
+```csharp
+// Registrar el handler como transient (se crea una instancia por uso)
+builder.Services.AddTransient<PollyDelegatingHandler>(sp =>
+    new PollyDelegatingHandler(combinedPolicy)
+);
+
+// Aplicar globalmente a través de ConfigureHttpClientDefaults
+builder.Services.ConfigureHttpClientDefaults(httpClientBuilder =>
+{
+    httpClientBuilder.AddHttpMessageHandler<PollyDelegatingHandler>();
+});
+
+// Clientes específicos heredan la configuración global
+builder.Services.AddHttpClient<IBackendService, BackendService>()
+    .ConfigureHttpClient(client =>
+    {
+        client.BaseAddress = new Uri("https://localhost:7056");
+        client.Timeout = TimeSpan.FromSeconds(10);
+    });
+```
+
+**Ventajas:**
+- ✅ Aplicación global automática
+- ✅ Flexible para agregar handlers adicionales por cliente
+- ✅ Control granular del ciclo de vida
+- ✅ Permite diferentes configuraciones si es necesario
+
+**Desventajas:**
+- ❌ Mayor consumo de memoria (instancia por uso)
+- ❌ Más overhead si hay muchos clientes
+
+**Ideal para:**
+- Aplicaciones medianas con varios clientes HTTP
+- Cuando necesitas personalización adicional por cliente
+
+---
+
+### ⭐ **Opción 3: Polly Integrado - Configuración Directa (RECOMENDADO)**
+
+Usa las extensiones nativas de Polly sin necesidad de `DelegatingHandler` personalizado. Esta es la forma más moderna y limpia:
+
+```csharp
+// Aplicar políticas globalmente a través de ConfigureHttpClientDefaults
+builder.Services.ConfigureHttpClientDefaults(httpClientBuilder =>
+{
+    httpClientBuilder
+        .AddPolicyHandler(retryPolicy)
+        .AddPolicyHandler(circuitBreakerPolicy);
+});
+
+// No necesitas registrar PollyDelegatingHandler
+builder.Services.AddHttpClient<IBackendService, BackendService>()
+    .ConfigureHttpClient(client =>
+    {
+        client.BaseAddress = new Uri("https://localhost:7056");
+        client.Timeout = TimeSpan.FromSeconds(10);
+    });
+
+// Para clientes sin nombre también hereda las políticas:
+builder.Services.AddHttpClient<OtherService>();
+```
+
+**Ventajas:**
+- ✅ Más simple y limpio
+- ✅ Integración nativa de Polly
+- ✅ No requiere `DelegatingHandler` personalizado
+- ✅ Menos código boilerplate
+- ✅ Mejor rendimiento
+- ✅ Recomendado por Microsoft
+
+**Desventajas:**
+- ❌ Menos control fino sobre el ciclo de vida
+- ❌ Si necesitas lógica personalizada en el handler, no aplica
+
+**Ideal para:**
+- La mayoría de casos de uso
+- Nuevos proyectos
+- Aplicaciones con muchos clientes HTTP
+
+---
+
+### 📊 Comparación de Opciones
+
+| Característica | Opción 1 | Opción 2 | Opción 3 |
+|---|---|---|---|
+| **Complejidad** | Media | Media | Baja ✅ |
+| **Rendimiento** | Excelente ✅ | Bueno | Excelente ✅ |
+| **Flexibilidad** | Media | Alta ✅ | Media |
+| **Control de ciclo de vida** | Alto ✅ | Alto ✅ | Bajo |
+| **Requiere DelegatingHandler** | Sí | Sí | No ✅ |
+| **Código boilerplate** | Mucho | Mucho | Poco ✅ |
+| **Facilidad de testing** | Alta | Alta | Alta ✅ |
+| **Recomendado para** | Casos específicos | Múltiples handlers | Uso general ✅ |
+
+---
+
+### 🎯 Recomendación
+
+Para **la mayoría de casos**, usa la **Opción 3** (Polly Integrado). Es la más limpia, eficiente y está ampliamente documentada. Usa las opciones 1 y 2 solo cuando necesites lógica personalizada en el `DelegatingHandler`.
+
 ## 🎯 Políticas Implementadas
 
 ### Política de Reintento (Retry Policy)
